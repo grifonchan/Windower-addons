@@ -1,6 +1,6 @@
 _addon.name = 'PorterPacker'
-_addon.author = 'Ivaar'
-_addon.version = '0.0.0.6'
+_addon.author = 'Ivaar, patched by Griffon'
+_addon.version = '0.0.0.7a'
 _addon.commands = {'porterpacker','packer','po'}
 
 require('pack')
@@ -10,7 +10,17 @@ bit = require('bit')
 slips = require('slips')
 res = require('resources')
 
-local equippable_bags = {[0]='Inventory',[8]='Wardrobe',[10]='Wardrobe2',[11]='Wardrobe3',[12]='Wardrobe4'}
+local equippable_bags = {
+	[0] ='Inventory',
+	[8] ='Wardrobe',
+	[10]='Wardrobe2',
+	[11]='Wardrobe3',
+	[12]='Wardrobe4',
+	[13]='Wardrobe5',
+	[14]='Wardrobe6',
+	[15]='Wardrobe7',
+	[16]='Wardrobe8'
+	}
 local storing_items = false
 local retrieve = {}
 local store = {}
@@ -33,6 +43,8 @@ local zones = {
     [252] = 246,    -- Norg - (G-7)
     [256] = 43,     -- Western Adoulin - (H-11)
     [280] = 802,    -- Mog Garden
+    [279] = 13, 	-- Walk of Echoes [P2]
+    [298] = 13,     -- Walk of Echoes [P1]
 }
 
 local function space_available(bag_id)
@@ -320,7 +332,7 @@ windower.register_event('addon command', function(...)
     elseif commands[1] == 'export' or commands[1] == 'exp' then
         local str = 'return {\n'
         for _, item in ipairs(windower.ffxi.get_items(0)) do
-            if slips.get_slip_id_by_item_id(item.id) and res.items[item.id] then
+            if item.id ~= 0 and slips.get_slip_id_by_item_id(item.id) then
                 str = str .. '    "%s",\n':format(res.items[item.id].name)
             end
         end
