@@ -15,6 +15,7 @@ song_buffs = {
     [207] = 'capriccio',
     [209] = 'round',
     [210] = 'gavotte',
+	[213] = 'aria',
     [214] = 'march',
     [215] = 'etude',
     [216] = 'carol',
@@ -59,6 +60,9 @@ local equip_mods = {
     [21401] = {0.2,Ballad=0.2}, -- 'Blurred Harp +1',
     [21405] = {0.2} ,           -- 'Eminent Flute',
     [21404] = {0.3},			-- 'Linos'			-- assumes +2 songs augment
+	[22305] = {0.2}, 			-- 'Loughnashade',	-- 119, all songs +2
+	[22306] = {0.3}, 			-- 'Loughnashade',	-- 119-2, all songs +3
+	[22307] = {0.4}, 			-- 'Loughnashade',	-- 119-3, all songs +4
     [20629] = {0.05},           -- 'Legato Dagger',
     [20599] = {0.05},           -- 'Kali',
     [27672] = {Paeon=0.1},      -- 'Brioso Roundlet',

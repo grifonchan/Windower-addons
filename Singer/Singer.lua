@@ -1,7 +1,7 @@
-_addon.author = 'Ivaar'
+_addon.author = 'Ivaar, updated by Griffon'
 _addon.commands = {'Singer','sing'}
 _addon.name = 'Singer'
-_addon.version = '1.20.08.18'
+_addon.version = '1.16.07.23'
 
 require('luau')
 require('pack')
@@ -30,7 +30,7 @@ default = {
     aoe={['party']=true, ['p1'] = true,['p2'] = true,['p3'] = true,['p4'] = true,['p5'] = true},
     min_ws=20,
     max_ws=99,
-    box={bg={visible=true},text={size=10},pos={x=650,y=0}},
+    box={bg={visible=true},text={size=10},pos={x=0,y=0}},
 }
 
 settings = config.load(default)
@@ -44,8 +44,8 @@ setting = T{
     },
     debuffs = L{},
     debuffs = L{"Carnage Elegy","Pining Nocturne",},
-    dummy = L{"Knight's Minne","Knight's Minne II",},
-    songs = L{"Advancing March","Victory March","Blade Madrigal","Sword Madrigal","Valor Minuet V",},
+    dummy = L{"Fowl Aubade","Herb Pastoral","Shining Fantasia","Gold Capriccio",},
+    songs = L{"Honor March","Victory March","Valor Minuet V","Valor Minuet IV",},
     song = {},
     playlist = T{
         clear = L{}

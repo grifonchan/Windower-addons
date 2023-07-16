@@ -1,6 +1,7 @@
 local get = {}
 
 get.songs = {
+	aria = {'Aria of Passion'},
     paeon = {'Army\'s Paeon VI','Army\'s Paeon V','Army\'s Paeon IV','Army\'s Paeon III','Army\'s Paeon II','Army\'s Paeon'},
     ballad = {'Mage\'s Ballad III','Mage\'s Ballad II','Mage\'s Ballad'},
     minne = {'Knight\'s Minne V','Knight\'s Minne IV','Knight\'s Minne III','Knight\'s Minne II','Knight\'s Minne'},
@@ -15,7 +16,7 @@ get.songs = {
     operetta = {'Puppet\'s Operetta','Scop\'s Operetta'},
     capriccio = {'Gold Capriccio'},
     round = {'Warding Round'},
-    gavotte = {'Shining Fantasia'},
+    gavotte = {'Goblin Gavotte'},
     hymnus = {'Goddess\'s Hymnus'},
     mazurka = {'Chocobo Mazurka'},
     sirvente = {'Foe Sirvente'},
@@ -142,7 +143,7 @@ local song = {
     [415] = 'Goblin Gavotte',
     [416] = 'Cactuar Fugue',
     [417] = 'Honor March',
-    [418] = 'Protected Aria',
+    [418] = 'Aria of Passion',
     [419] = 'Advancing March',
     [420] = 'Victory March',
     [421] = 'Battlefield Elegy',
@@ -239,7 +240,11 @@ local equippable_bags = {
     'Wardrobe',
     'Wardrobe2',
     'Wardrobe3',
-    'Wardrobe4'
+    'Wardrobe4',
+	'Wardrobe5',
+	'Wardrobe6',
+	'Wardrobe7',
+	'Wardrobe8'
     }
 
 local extra_song_harp = {
@@ -250,10 +255,19 @@ local extra_song_harp = {
     [21400] = 3, -- Blurred Harp
     [21401] = 3, -- Blurred Harp +1
     [21407] = 3, -- Terpander
+	[22305] = 2, --  Loughnashade 99-1
+	[22306] = 3, --  Loughnashade 99-2
+	[22307] = 4, --  Loughnashade 99-3
     }
 
 local honor_march_horn = {
     [21398] = true -- Marsyas
+    }
+	
+local aria_horn = {
+	[22305] = true, --  Loughnashade 99-1
+	[22306] = true, --  Loughnashade 99-2
+	[22307] = true, --  Loughnashade 99-3
     }
 
 local function find_equippable_item(item_ids)
